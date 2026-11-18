@@ -9,7 +9,7 @@ export function StackList() {
         <p className="shrink-0 text-xs tabular-nums text-muted-foreground">
           {"//\\|"}
         </p>
-        <h2 id="stack-heading" className="text-lg font-semibold sm:text-xl">
+        <h2 id="stack-heading" className="text-base font-semibold sm:text-lg">
           <span className="sr-only">Stack </span>
           [I]
         </h2>

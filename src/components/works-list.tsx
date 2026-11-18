@@ -15,7 +15,7 @@ export function WorksList() {
   return (
     <section aria-labelledby="works-heading" className="min-w-0">
       <div className="flex items-baseline justify-between gap-4">
-        <h2 id="works-heading" className="text-lg font-semibold sm:text-xl">
+        <h2 id="works-heading" className="text-base font-semibold sm:text-lg">
           <span className="sr-only">Selected </span>
           [I]
         </h2>
