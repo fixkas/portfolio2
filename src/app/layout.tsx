@@ -16,7 +16,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={cn("h-full", "antialiased", "font-sans", geist.variable)}
     >
-      <body className="dark min-h-full flex flex-col">{children}</body>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+      </style>
+      <body className="share-tech-mono-regular dark min-h-full h-full p-2 sm:p-6 lg:p-10 flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
