@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "commit": "57217cf86ba38148a57af9e90d14a4c049558330",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "7bc223e2aafbdbf6e50ea243ba6ef67fe432bb069ab439fea0390795dac0bf7f"
+    },
+    "git-commit": {
+      "source": "github/awesome-copilot",
+      "commit": "a255a193d1318e5a9ca3e9e575897f9a7845c099",
+      "sourceType": "github",
+      "skillPath": "skills/git-commit/SKILL.md",
+      "computedHash": "90716f49501831c6c0679509b295495021eae83923d6a39035ce7c2d9cd2e8f2"
+    },
+    "git-guardrails-claude-code": {
+      "source": "mattpocock/skills",
+      "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+      "sourceType": "github",
+      "skillPath": "skills/misc/git-guardrails-claude-code/SKILL.md",
+      "computedHash": "7aa92e9d469c6cd0b24ed8accb2e4be681c44c1524d71604c06b4055b7b56482"
+    }
+  }
+}
