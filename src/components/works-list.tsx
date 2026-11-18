@@ -1,19 +1,4 @@
-import {
-  AtSign,
-  BookOpen,
-  FileCode2,
-  FileIcon,
-  ShoppingCart,
-  type LucideIcon,
-} from "lucide-react";
 import worksData from "@/consts/works.json";
-
-const icons: Record<string, LucideIcon> = {
-  AtSign,
-  BookOpen,
-  FileCode2,
-  ShoppingCart,
-};
 
 const dateFormatter = new Intl.DateTimeFormat("en-CA", {
   day: "2-digit",
@@ -32,13 +17,10 @@ export function WorksList() {
       <div className="flex items-baseline justify-between gap-4">
         <h2 id="works-heading" className="text-lg font-semibold sm:text-xl">
           <span className="sr-only">Selected </span>
-          <span aria-hidden="true" className="text-muted-foreground">
-            ~/
-          </span>
-          works
+          [works]
         </h2>
         <p className="shrink-0 text-xs tabular-nums text-muted-foreground">
-          {works.length} {works.length === 1 ? "entry" : "entries"}
+          /\/
         </p>
       </div>
 
@@ -49,7 +31,6 @@ export function WorksList() {
       ) : (
         <ul className="mt-4">
           {works.map((work) => {
-            const Icon = icons[work.icon] ?? FileIcon;
             const date = new Date(`${work.date}T00:00:00Z`);
 
             return (
@@ -58,20 +39,15 @@ export function WorksList() {
                   href={work.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group -mx-1.5 grid min-h-11 touch-manipulation grid-cols-[1.75rem_1rem_minmax(0,1fr)_auto_1.25rem] items-baseline gap-x-2 px-1.5 py-2.5 text-sm leading-6 hover:bg-foreground hover:text-background focus-visible:bg-foreground focus-visible:text-background focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                  className="group -mx-1.5 grid min-h-11 touch-manipulation grid-cols-[1rem_minmax(0,1fr)_auto_1.25rem] items-baseline gap-x-2 px-1.5 py-2.5 text-sm leading-6 hover:bg-foreground/80 hover:text-background focus-visible:bg-foreground focus-visible:text-background focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
                 >
                   <span
                     aria-hidden="true"
-                    className="whitespace-nowrap text-muted-foreground group-hover:text-background/60 group-focus-visible:text-background/60"
+                    className="text-center text-muted-foreground group-hover:text-background/60 group-focus-visible:text-background/60"
                   >
-                    `--
+                    {work.icon ?? "*"}
                   </span>
-                  <Icon
-                    aria-hidden="true"
-                    strokeWidth={1.5}
-                    className="mt-[5px] size-3.5 self-start"
-                  />
-                  <span className="min-w-0 break-words text-pretty">
+                  <span className="min-w-0 truncate" title={work.title}>
                     {work.title}
                   </span>
                   <time
