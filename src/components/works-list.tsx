@@ -17,10 +17,10 @@ export function WorksList() {
       <div className="flex items-baseline justify-between gap-4">
         <h2 id="works-heading" className="text-lg font-semibold sm:text-xl">
           <span className="sr-only">Selected </span>
-          [works]
+          [I]
         </h2>
         <p className="shrink-0 text-xs tabular-nums text-muted-foreground">
-          /\/
+          |/\\
         </p>
       </div>
 
