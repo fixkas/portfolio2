@@ -29,7 +29,7 @@ export function WorksList() {
           No projects listed yet.
         </p>
       ) : (
-        <ul className="mt-4">
+        <ul className="mt-4 max-h-64 overflow-y-auto overflow-x-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:max-h-72">
           {works.map((work) => {
             const date = new Date(`${work.date}T00:00:00Z`);
 
@@ -39,11 +39,11 @@ export function WorksList() {
                   href={work.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group -mx-1.5 grid min-h-11 touch-manipulation grid-cols-[1rem_minmax(0,1fr)_auto_1.25rem] items-baseline gap-x-2 px-1.5 py-2.5 text-sm leading-6 hover:bg-foreground/80 hover:text-background focus-visible:bg-foreground focus-visible:text-background focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                  className="group grid min-h-11 touch-manipulation grid-cols-[1rem_minmax(0,1fr)_auto_1.25rem] items-baseline gap-x-2 px-1.5 py-2.5 text-sm leading-6 hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
                 >
                   <span
                     aria-hidden="true"
-                    className="text-center text-muted-foreground group-hover:text-background/60 group-focus-visible:text-background/60"
+                    className="text-center text-muted-foreground"
                   >
                     {work.icon ?? "*"}
                   </span>
@@ -52,13 +52,13 @@ export function WorksList() {
                   </span>
                   <time
                     dateTime={work.date}
-                    className="whitespace-nowrap text-xs tabular-nums text-muted-foreground group-hover:text-background/70 group-focus-visible:text-background/70"
+                    className="whitespace-nowrap text-xs tabular-nums text-muted-foreground"
                   >
                     {dateFormatter.format(date)}
                   </time>
                   <span
                     aria-hidden="true"
-                    className="justify-self-end whitespace-nowrap text-xs text-muted-foreground group-hover:text-background/70 group-focus-visible:text-background/70"
+                    className="justify-self-end whitespace-nowrap text-xs text-muted-foreground"
                   >
                     {"->"}
                   </span>

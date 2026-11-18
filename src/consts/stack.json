@@ -1,0 +1,29 @@
+{
+  "groups": [
+    {
+      "label": "core",
+      "items": [
+        { "name": "TypeScript" },
+        { "name": "JavaScript" },
+        { "name": "HTML & CSS" }
+      ]
+    },
+    {
+      "label": "framework",
+      "items": [{ "name": "React" }, { "name": "Next.js" }]
+    },
+    {
+      "label": "styling",
+      "items": [{ "name": "Tailwind CSS" }, { "name": "shadcn/ui" }]
+    },
+    {
+      "label": "tools",
+      "items": [
+        { "name": "Git & GitHub" },
+        { "name": "pnpm" },
+        { "name": "Vercel" },
+        { "name": "Linux" }
+      ]
+    }
+  ]
+}
