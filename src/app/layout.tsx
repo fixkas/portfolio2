@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist } from "next/font/google";
+import { Geist, Share_Tech_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+
+const shareTechMono = Share_Tech_Mono({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-share",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,13 +21,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", "font-sans", geist.variable)}
+      className={cn(
+        "h-full",
+        "antialiased",
+        "font-sans",
+        geist.variable,
+        shareTechMono.variable,
+      )}
     >
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-      </style>
-      <body className="share-tech-mono-regular dark min-h-full h-full p-2 sm:p-6 lg:p-10 flex flex-col">
+      <body className="share dark min-h-full h-full p-2 sm:p-6 lg:p-10 flex flex-col">
         {children}
       </body>
     </html>

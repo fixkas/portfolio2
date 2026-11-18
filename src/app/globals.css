@@ -129,8 +129,8 @@
   }
 }
 
-.share-tech-mono-regular {
-  font-family: "Share Tech Mono", monospace;
+.share {
+  font-family: var(--font-share), monospace;
   font-weight: 400;
   font-style: normal;
 }
