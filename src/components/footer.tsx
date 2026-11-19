@@ -9,15 +9,26 @@ export function Footer() {
           </span>
         ))}
       </p>
-      <a
-        href="https://github.com/fixkas"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-primary underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground"
-      >
-        [GitHub]
-        <span className="sr-only"> (opens in a new tab)</span>
-      </a>
+      <div className="flex items-center gap-4">
+        <a
+          href="https://github.com/fixkas"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-primary underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground"
+        >
+          [GitHub]
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a
+          href="https://t.me/fixkas"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-primary underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground"
+        >
+          [Telegram]
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
     </footer>
   );
 }
