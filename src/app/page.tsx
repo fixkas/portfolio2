@@ -1,14 +1,17 @@
+import { ContributionChart } from "@/components/contribution-chart";
 import { DashedDivider } from "@/components/dashed-divider";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { StackList } from "@/components/stack-list";
 import { WorksList } from "@/components/works-list";
+import { getGithubContributions } from "@/lib/github-contributions";
 import { getWorks } from "@/lib/works";
 import { getStackGroups } from "@/lib/stack";
 
 export default async function Home() {
   const works = getWorks();
   const groups = getStackGroups();
+  const contributions = await getGithubContributions();
 
   return (
     <main
@@ -26,9 +29,14 @@ export default async function Home() {
         <StackList groups={groups} />
       </div>
       <DashedDivider />
-      <section className="flex min-h-0 flex-1" aria-labelledby="graph-heading">
-        <h2 id="graph-heading" className="sr-only">Graph</h2>
-        <div className="flex min-h-0 flex-1">graph</div>
+      <section
+        className="relative flex min-h-0 flex-1 flex-col px-2 py-4 sm:px-4"
+        aria-labelledby="graph-heading"
+      >
+        <h2 id="graph-heading" className="text-center">
+          [GitHub contributions]
+        </h2>
+        <ContributionChart data={contributions} />
       </section>
       <DashedDivider />
       <Footer />
