@@ -140,3 +140,19 @@
   background-color: white;
   color: black;
 }
+
+.logo-ascii {
+  cursor: default;
+}
+
+.logo-ascii .logo-dot {
+  transition: color 150ms ease;
+}
+
+.logo-ascii:hover .logo-dot {
+  color: var(--accent);
+}
+
+.logo-ascii .logo-dot:hover {
+  color: var(--primary);
+}

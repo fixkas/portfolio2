@@ -16,9 +16,20 @@ export function LogoAscii({ className }: { className?: string }) {
     <pre
       role="img"
       aria-label="Kasra logo"
-      className={cn("whitespace-pre leading-none text-foreground", className)}
+      className={cn(
+        "logo-ascii whitespace-pre leading-none text-foreground",
+        className,
+      )}
     >
-      {logoAscii.trim()}
+      {Array.from(logoAscii.trim()).map((char, i) =>
+        char === "\n" ? (
+          "\n"
+        ) : (
+          <span key={i} aria-hidden="true" className="logo-dot">
+            {char}
+          </span>
+        ),
+      )}
     </pre>
   );
 }
