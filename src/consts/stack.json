@@ -24,7 +24,11 @@
     },
     {
       "label": "styling",
-      "items": [{ "name": "Tailwind CSS" }, { "name": "shadcn/ui" }]
+      "items": [
+        { "name": "Tailwind CSS" },
+        { "name": "shadcn/ui" },
+        { "name": "Motion" }
+      ]
     },
     {
       "label": "libraries",
