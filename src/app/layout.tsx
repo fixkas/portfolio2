@@ -32,6 +32,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       )}
     >
       <body className="share flex h-full min-h-full flex-col p-2 sm:p-6 lg:p-10">
+        <div
+          aria-hidden="true"
+          className="fixed inset-0 -z-10 bg-[url('/back.png')] bg-cover bg-center bg-no-repeat"
+        />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:bg-background focus:px-3 focus:py-2 focus:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-foreground"
