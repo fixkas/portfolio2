@@ -13,16 +13,25 @@
       "items": [{ "name": "React" }, { "name": "Next.js" }]
     },
     {
-      "label": "styling",
-      "items": [{ "name": "Tailwind CSS" }, { "name": "shadcn/ui" }]
-    },
-    {
       "label": "tools",
       "items": [
         { "name": "Git & GitHub" },
         { "name": "pnpm" },
+        { "name": "Vite" },
         { "name": "Vercel" },
         { "name": "Linux" }
+      ]
+    },
+    {
+      "label": "styling",
+      "items": [{ "name": "Tailwind CSS" }, { "name": "shadcn/ui" }]
+    },
+    {
+      "label": "libraries",
+      "items": [
+        { "name": "Zustand" },
+        { "name": "Zod" },
+        { "name": "React Hook Form" }
       ]
     }
   ]
