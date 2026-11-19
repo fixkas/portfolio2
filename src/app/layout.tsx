@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="share flex h-full min-h-full flex-col p-2 sm:p-6 lg:p-10">
         <div
           aria-hidden="true"
-          className="fixed inset-0 -z-10 bg-[url('/back.png')] bg-cover bg-center bg-no-repeat"
+          className="fixed inset-0 -z-10 bg-[url('/back.png')] bg-cover bg-center bg-no-repeat opacity-80"
         />
         <a
           href="#main-content"
