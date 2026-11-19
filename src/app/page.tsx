@@ -30,11 +30,11 @@ export default async function Home() {
       </div>
       <DashedDivider />
       <section
-        className="relative flex min-h-[50vh] min-w-0 flex-1 flex-col overflow-hidden px-2 py-4 sm:min-h-0 sm:px-4"
+        className="relative flex min-h-[50vh] min-w-0 flex-1 flex-col overflow-hidden px-2 py-4 md:min-h-0 sm:px-4"
         aria-labelledby="graph-heading"
       >
         <h2 id="graph-heading" className="text-center">
-          [GitHub contributions]
+          [II]
         </h2>
         <ContributionChart data={contributions} />
       </section>
