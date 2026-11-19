@@ -32,7 +32,7 @@ export function ContributionChart({ data }: { data: ContributionWeek[] }) {
   return (
     <ChartContainer
       config={chartConfig}
-      className="aspect-auto h-full min-h-48 w-full"
+      className="aspect-auto min-h-48 w-full min-w-0 max-w-full flex-1 overflow-hidden"
     >
       <LineChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
         <CartesianGrid vertical={false} strokeDasharray="3 3" />

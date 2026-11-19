@@ -16,7 +16,7 @@ export default async function Home() {
   return (
     <main
       id="main-content"
-      className="relative mx-auto flex w-full max-w-4xl flex-1 flex-col overflow-hidden overflow-y-auto border-4 border-dashed overscroll-behavior-contain"
+      className="relative mx-auto flex w-full max-w-4xl flex-1 flex-col overflow-hidden overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden border-4 border-dashed overscroll-behavior-contain"
     >
       <Hero />
       <DashedDivider />
@@ -30,7 +30,7 @@ export default async function Home() {
       </div>
       <DashedDivider />
       <section
-        className="relative flex min-h-0 flex-1 flex-col px-2 py-4 sm:px-4"
+        className="relative flex min-h-[50vh] min-w-0 flex-1 flex-col overflow-hidden px-2 py-4 sm:min-h-0 sm:px-4"
         aria-labelledby="graph-heading"
       >
         <h2 id="graph-heading" className="text-center">
