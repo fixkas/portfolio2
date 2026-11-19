@@ -1,8 +1,10 @@
-import stackData from "@/consts/stack.json";
+import type { StackGroup } from "@/types/stack";
 
-export function StackList() {
-  const { groups } = stackData;
+interface StackListProps {
+  groups: StackGroup[];
+}
 
+export function StackList({ groups }: StackListProps) {
   return (
     <section aria-labelledby="stack-heading" className="min-w-0">
       <div className="flex items-baseline justify-between gap-4">
@@ -22,32 +24,25 @@ export function StackList() {
               [{group.label}]
             </h3>
             <ul className="mt-1">
-              {group.items.map((item) => {
-                const note = "note" in item ? item.note : undefined;
-
-                return (
-                  <li
-                    key={item.name}
-                    className="grid cursor-default grid-cols-[1rem_minmax(0,1fr)] items-baseline gap-x-2 px-1.5 py-1 text-sm leading-6 hover:text-muted-foreground"
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="text-center text-muted-foreground"
-                    >
-                      &gt;
-                    </span>
-                    <span className="min-w-0 break-words">
-                      {item.name}
-                      {typeof note === "string" && note ? (
-                        <span className="text-muted-foreground">
-                          {" "}
-                          <span aria-hidden="true">·</span> {note}
-                        </span>
-                      ) : null}
-                    </span>
-                  </li>
-                );
-              })}
+              {group.items.map((item) => (
+                <li
+                  key={item.name}
+                  className="grid cursor-default grid-cols-[1rem_minmax(0,1fr)] items-baseline gap-x-2 px-1.5 py-1 text-sm leading-6 hover:text-muted-foreground"
+                >
+                  <span aria-hidden="true" className="text-center text-muted-foreground">
+                    {">"}
+                  </span>
+                  <span className="min-w-0 break-words">
+                    {item.name}
+                    {item.note ? (
+                      <span className="text-muted-foreground">
+                        {" "}
+                        <span aria-hidden="true">·</span> {item.note}
+                      </span>
+                    ) : null}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
         ))}
