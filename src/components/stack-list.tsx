@@ -17,35 +17,43 @@ export function StackList({ groups }: StackListProps) {
         </h2>
       </div>
 
-      <div className="mt-4 grid max-h-64 grid-cols-1 gap-4 overflow-y-auto overflow-x-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:max-h-[165px] sm:grid-cols-2">
-        {groups.map((group) => (
-          <div key={group.label}>
-            <h3 className="px-1.5 text-xs text-muted-foreground">
-              [{group.label}]
-            </h3>
-            <ul className="mt-1">
-              {group.items.map((item) => (
-                <li
-                  key={item.name}
-                  className="grid cursor-default grid-cols-[1rem_minmax(0,1fr)] items-baseline gap-x-2 px-1.5 py-1 text-sm leading-6 hover:text-muted-foreground"
-                >
-                  <span aria-hidden="true" className="text-center text-muted-foreground">
-                    {">"}
-                  </span>
-                  <span className="min-w-0 break-words">
-                    {item.name}
-                    {item.note ? (
-                      <span className="text-muted-foreground">
-                        {" "}
-                        <span aria-hidden="true">·</span> {item.note}
-                      </span>
-                    ) : null}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="mt-4 max-h-64 overflow-y-auto overflow-x-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:max-h-[165px]">
+        <div className="gap-4 sm:columns-2">
+          {groups.map((group) => (
+            <div
+              key={group.label}
+              className="mb-4 break-inside-avoid last:mb-0"
+            >
+              <h3 className="px-1.5 text-xs text-muted-foreground">
+                [{group.label}]
+              </h3>
+              <ul className="mt-1">
+                {group.items.map((item) => (
+                  <li
+                    key={item.name}
+                    className="grid cursor-default grid-cols-[1rem_minmax(0,1fr)] items-baseline gap-x-2 px-1.5 py-1 text-sm leading-6 hover:text-muted-foreground"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="text-center text-muted-foreground"
+                    >
+                      {">"}
+                    </span>
+                    <span className="min-w-0 break-words">
+                      {item.name}
+                      {item.note ? (
+                        <span className="text-muted-foreground">
+                          {" "}
+                          <span aria-hidden="true">·</span> {item.note}
+                        </span>
+                      ) : null}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
